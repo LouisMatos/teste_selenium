@@ -18,9 +18,9 @@ public class AutomacaoTeste extends FirefoxContext{
 		try{
 			telaLogin.clicarBotaoLogin();
 			
-			telaLogin.digitarCaixaDeTextoEmail("");
+			telaLogin.digitarCaixaDeTextoEmail("teste@teste.com");
 			
-			telaLogin.digitarCaixaDeTextoSenha("");
+			telaLogin.digitarCaixaDeTextoSenha("teste@teste.com");
 			
 			telaLogin.clicarBotaoEntrar();
 			
