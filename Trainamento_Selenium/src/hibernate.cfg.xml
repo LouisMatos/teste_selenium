@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>  
+	  
+	    <session-factory>  
+	  
+	        <!-- CONFIGURACAO DE CONEXAO -->  
+	        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>  
+	        <property name="connection.url">jdbc:sqlserver://DESKTOP-2D7CUF2\SQLEXPRESS;databaseName=TreinamentoAutomacao</property>  
+	        <property name="connection.username">sa</property>
+	        <property name="connection.password">Dt030507</property>
+	  
+	        <!-- SQL DIALETO -->  
+	        <property name="dialect">org.hibernate.dialect.SQLServer2008Dialect</property>  
+	  
+	        <!-- MOSTRAR SQL -->  
+	        <property name="show_sql">true</property>  
+	  
+	        <!-- DELETAR E RECRIAR SCHEMA PELAS CLASSES -->  
+	        <property name="hbm2ddl.auto">update</property>  
+	        
+	        <!-- POOL -->
+			<property name="hibernate.c3p0.min_size">5</property>
+			<property name="hibernate.c3p0.max_size">20</property>
+			<property name="hibernate.c3p0.timeout">300</property>
+			<property name="hibernate.c3p0.max_statements">50</property>
+			<property name="hibernate.c3p0.idle_test_period">3000</property>
+			<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+	  
+	        <mapping class="br.com.felipemira.dao.model.Massa"></mapping>  
+	  
+	    </session-factory>  
+	  
+	</hibernate-configuration>
